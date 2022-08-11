@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="width_car">40dp</dimen>
+    <dimen name="height_car">100dp</dimen>
+    <dimen name="margin_bottom">20dp</dimen>
+</resources>
