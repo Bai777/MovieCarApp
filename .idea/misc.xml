@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/AndroidProjects/MovieCarApp/app/src/main/res/drawable/ic_baseline_beep.xml" value="0.1785" />
         <entry key="..\:/AndroidProjects/MovieCarApp/app/src/main/res/layout/fragment_main.xml" value="0.33" />
       </map>
     </option>

@@ -3,51 +3,44 @@ package com.example.moviecarapp
 import android.view.animation.LinearInterpolator
 import android.view.animation.OvershootInterpolator
 import com.example.moviecarapp.databinding.FragmentMainBinding
+import kotlin.system.exitProcess
 
 class Presenter(private val binding: FragmentMainBinding) {
 
     fun pressUp() {
-        binding.up.setOnClickListener {
-            rotation(Way.UP)
-            binding.car.animate()
-                .translationYBy(-MOVE_DISTANCE)
-                .setDuration(MOVE_DURATION)
-                .setInterpolator(LinearInterpolator())
-                .start()
-        }
+        rotation(Way.UP)
+        binding.car.animate()
+            .translationYBy(-MOVE_DISTANCE)
+            .setDuration(MOVE_DURATION)
+            .setInterpolator(LinearInterpolator())
+            .start()
     }
 
     fun pressLeft() {
-        binding.left.setOnClickListener {
-            rotation(Way.LEFT)
-            binding.car.animate()
-                .translationXBy(-MOVE_DISTANCE)
-                .setDuration(MOVE_DURATION)
-                .setInterpolator(LinearInterpolator())
-                .start()
-        }
+        rotation(Way.LEFT)
+        binding.car.animate()
+            .translationXBy(-MOVE_DISTANCE)
+            .setDuration(MOVE_DURATION)
+            .setInterpolator(LinearInterpolator())
+            .start()
     }
 
     fun pressDown() {
-        binding.down.setOnClickListener {
-            rotation(Way.DOWN)
-            binding.car.animate()
-                .translationXBy(MOVE_DISTANCE)
-                .setDuration(MOVE_DURATION)
-                .setInterpolator(LinearInterpolator())
-                .start()
-        }
+        rotation(Way.DOWN)
+        binding.car.animate()
+            .translationYBy(MOVE_DISTANCE)
+            .setDuration(MOVE_DURATION)
+            .setInterpolator(LinearInterpolator())
+            .start()
     }
 
     fun pressRight() {
-        binding.right.setOnClickListener {
-            rotation(Way.RIGHT)
-            binding.car.animate()
-                .translationXBy(MOVE_DISTANCE)
-                .setDuration(MOVE_DURATION)
-                .setInterpolator(LinearInterpolator())
-                .start()
-        }
+        rotation(Way.RIGHT)
+        binding.car.animate()
+            .translationXBy(MOVE_DISTANCE)
+            .setDuration(MOVE_DURATION)
+            .setInterpolator(LinearInterpolator())
+            .start()
     }
 
     private fun rotation(way: Way) {
@@ -65,8 +58,12 @@ class Presenter(private val binding: FragmentMainBinding) {
             .start()
     }
 
+    fun exit() {
+        exitProcess(0)
+    }
+
     companion object {
         const val MOVE_DURATION = 1000L
-        const val MOVE_DISTANCE = 200f
+        const val MOVE_DISTANCE = 300f
     }
 }

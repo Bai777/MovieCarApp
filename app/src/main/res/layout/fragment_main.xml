@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainFragment">
 
     <ImageView
@@ -12,7 +12,7 @@
         android:layout_height="@dimen/height_car"
         android:layout_gravity="center"
         android:contentDescription="@string/car"
-        android:src="@drawable/my_car" />
+        android:src="@drawable/car" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="wrap_content"
@@ -29,6 +29,18 @@
             app:layout_constraintBottom_toTopOf="@id/down"
             app:layout_constraintEnd_toStartOf="@id/right"
             app:layout_constraintStart_toEndOf="@id/left"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageButton
+            android:id="@+id/exit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/control"
+            android:src="@drawable/ic_baseline_close"
+            app:layout_constraintBottom_toTopOf="@id/right"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/up"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageButton
